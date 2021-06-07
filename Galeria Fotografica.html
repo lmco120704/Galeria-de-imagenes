@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Galeria</title>
+    <link rel="shortcut icon" href="Icono de Galeria.png">
+    <style>
+    body{
+        margin-right: 50px;
+        margin-right: 50px;
+        background: #82E0AA;
+    }
+    h1{
+        margin-top: 10px;
+        text-align: center;
+        font-size: 90px;/*tamaño de la letra*/
+        color: #922B21;
+    }
+        #gallery-screen {/*estilos de la imagen grande*/
+            width: 400px;
+            height: 400px;
+            margin: 20px auto;
+            padding: 5px;
+            border: 1px solid #ddd;
+            display: flex;/* hace que cada 1 este al lado del otro */
+        }
+       
+        #thumb {
+            text-align: center;
+        }
+       
+        #thumb div {/*estilos de las imagenes pequeñas en general*/
+            display: inline-block;
+            margin: 0 5px;
+            padding: 5px;
+            border-radius: 15px;
+            width: 100px;/*tamaño del borde al pasar con el cursor sobre la imagen*/
+            height: 70px;
+            max-width: 1000px;
+            flex-wrap: wrap;
+        }
+       
+        #thumb div:hover {
+            border-radius: 15px;
+            border: 1px solid #0A42E9;/*borde al pasar maus sobre imagen*/
+            transform: scale(1.1);/*animacion al pasar cursor sobre la imagen*/
+            transition: all.3s ease;/*tiempo de animacion al pasar cursor del maus*/
+        }
+       
+        #thumb div img {
+            max-width: 100%;
+        }
+
+        .imagen{
+            width: 100px;/*tamaño de la imagen*/
+            height: 70px;/*tamaño de la imagen*/
+            margin-bottom: 20px;/*margen abajo de la imagen*/
+            border-radius: 15px;/*redondea el borde de la imagen*/
+            object-fit: cover;/*hace que la imagen no se estire al momento de tomar las medidas especificadas*/
+            
+        }
+       
+    </style>
+   
+    <script>
+        //GALERIA
+    function iniciar () {
+        var miniatus1 = document.getElementById('1');
+        var miniatus2 = document.getElementById('2');
+        var miniatus3 = document.getElementById('3');
+        var miniatus4 = document.getElementById('4');
+        var miniatus5 = document.getElementById('5');
+        var miniatus6 = document.getElementById('6');
+        var miniatus7 = document.getElementById('7');
+        var miniatus8 = document.getElementById('8');
+        var miniatus9 = document.getElementById('9');
+        var miniatus10 = document.getElementById('10');
+        var foto = document.getElementById('foto');
+
+        miniatus1.addEventListener('click',camb1,false);
+        miniatus2.addEventListener('click',camb2,false);
+        miniatus3.addEventListener('click',camb3,false);
+        miniatus4.addEventListener('click',camb4,false);
+        miniatus5.addEventListener('click',camb5,false);
+        miniatus6.addEventListener('click',camb6,false);
+        miniatus7.addEventListener('click',camb7,false);
+        miniatus8.addEventListener('click',camb8,false);
+        miniatus9.addEventListener('click',camb9,false);
+        miniatus10.addEventListener('click',camb10,false);
+
+        function camb1() {
+            foto.src = "1.jpg";
+        }
+
+        function camb2() {
+            foto.src = "2.jpg";
+        }
+
+        function camb3() {
+            foto.src = "3.jpg";
+        }
+
+        function camb4() {
+            foto.src = "4.jpg";
+        }
+         function camb5() {
+            foto.src = "5.jpg";
+        }
+
+         function camb6() {
+            foto.src = "6.jpg";
+        }
+
+         function camb7() {
+            foto.src = "7.jpg";
+        }
+
+         function camb8() {
+            foto.src = "8.jpg";
+        }
+
+         function camb9() {
+            foto.src = "9.jpg";
+        }
+
+         function camb10() {
+            foto.src = "10.jpg";
+        }
+
+    }
+    </script>
+   
+</head>
+<body onload="iniciar()">
+    <h1>Galeria de imagenes</h1>
+    <div class="gallery">
+        <div id="gallery-screen">
+            <img id="foto" src="1.jpg" alt="">
+        </div>
+       
+        <div id="thumb">
+            <div id="1"><img src="1.jpg" alt="" class="imagen"></div>
+            <div id="2"><img src="2.jpg" alt="" class="imagen"></div>
+            <div id="3"><img src="3.jpg" alt="" class="imagen"></div>
+            <div id="4"><img src="4.jpg" alt="" class="imagen"></div>
+            <div id="5"><img src="5.jpg" alt="" class="imagen"></div>
+            <div id="6"><img src="6.jpg" alt="" class="imagen"></div>
+            <div id="7"><img src="7.jpg" alt="" class="imagen"></div>
+            <div id="8"><img src="8.jpg" alt="" class="imagen"></div>
+            <div id="9"><img src="9.jpg" alt="" class="imagen"></div>
+            <div id="10"><img src="10.jpg" alt="" class="imagen"></div>
+        </div>
+    </div>
+</body>
+</html>
